@@ -10,11 +10,11 @@ if (userName === undefined || userName === null || userName === '') {
 
 // Створити скрипт для складання, віднімання, множення та поділу двох чисел та виведення результатів.
 // Числа вводить користувач, врахувати, що він може ввести невалідні дані
-const numberOne = prompt('Enter first digit');
-const numberTwo = prompt('Enter second digit');
+const numberOne = prompt('Enter first digit.');
+const numberTwo = prompt('Enter second digit.');
 
 if (!isNaN(numberOne) && !isNaN(numberTwo)) {
-  const mathOperation = prompt('Enter math operation you want to execute');
+  const mathOperation = prompt('Enter math operation you want to execute.');
 
   let result;
   if (mathOperation === '+') {
@@ -50,7 +50,7 @@ const secondDigit = prompt('Please enter second digit.');
 alert(`The digits are equal: ${firstDigit === secondDigit}`);
 
 // Розкласти по цифрах п'ятизначне число і вивести у вихідному порядку через пробіл (використовувати оператор “розподіл по модулю” %)
-const fifthDigitNumber = prompt('Please enter five digits number');
+const fifthDigitNumber = prompt('Please enter five digits number.');
 if (!isNaN(fifthDigitNumber) && fifthDigitNumber.length === 5) {
   let fifthDigit = fifthDigitNumber % 10;
   let fourthDigit = Math.floor((fifthDigitNumber % 100) / 10);
@@ -62,5 +62,5 @@ if (!isNaN(fifthDigitNumber) && fifthDigitNumber.length === 5) {
     `${firstDigit} ${secondDigit} ${thirdDigit} ${fourthDigit} ${fifthDigit}`
   );
 } else {
-  alert('Enter valid five digit number');
+  alert('Enter valid five digit number.');
 }
