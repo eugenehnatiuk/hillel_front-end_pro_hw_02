@@ -1,5 +1,5 @@
-// За допомогою prompt запитати як звуть користувача. За допомогою alert вивести "Hello, John! How are you?", де John це те, що ввів користувач.
-// Врахувати, що користувач може натиснути cancel або нічого не ввести
+// // За допомогою prompt запитати як звуть користувача. За допомогою alert вивести "Hello, John! How are you?", де John це те, що ввів користувач.
+// // Врахувати, що користувач може натиснути cancel або нічого не ввести
 const userName = prompt("What's your name?");
 
 if (userName === undefined || userName === null || userName === '') {
@@ -8,8 +8,8 @@ if (userName === undefined || userName === null || userName === '') {
   alert(`Hello, ${userName}! How are you?`);
 }
 
-// Створити скрипт для складання, віднімання, множення та поділу двох чисел та виведення результатів.
-// Числа вводить користувач, врахувати, що він може ввести невалідні дані
+// // Створити скрипт для складання, віднімання, множення та поділу двох чисел та виведення результатів.
+// // Числа вводить користувач, врахувати, що він може ввести невалідні дані
 const numberOne = prompt('Enter first digit.');
 const numberTwo = prompt('Enter second digit.');
 
@@ -43,11 +43,14 @@ if (!isNaN(numberOne) && !isNaN(numberTwo)) {
 const equalCheckMessage = alert(
   'In the next promt enter digits you want to check for equality.'
 );
-
 const firstDigit = prompt('Please enter first digit.');
 const secondDigit = prompt('Please enter second digit.');
 
-alert(`The digits are equal: ${firstDigit === secondDigit}`);
+if (firstDigit === null || secondDigit === null) {
+  alert('Please enter valid digits in both fields. Renew page and try again.');
+} else {
+  alert(`The digits are equal: ${firstDigit === secondDigit}`);
+}
 
 // Розкласти по цифрах п'ятизначне число і вивести у вихідному порядку через пробіл (використовувати оператор “розподіл по модулю” %)
 const fifthDigitNumber = prompt('Please enter five digits number.');
