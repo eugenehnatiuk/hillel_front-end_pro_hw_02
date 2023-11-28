@@ -37,7 +37,7 @@ if (
       alert('Error: Division by zero is not allowed.');
     }
   }
-  if (result === undefined) {
+  if (!result) {
     alert(`Something went wrong. Please renew page and try again.`);
   } else {
     alert(`The result of Math operations is: ${result}`);
@@ -60,7 +60,7 @@ if (firstValue === null || secondValue === null) {
 }
 
 // 4 Розкласти по цифрах п'ятизначне число і вивести у вихідному порядку через пробіл (використовувати оператор “розподіл по модулю” %)
-const fifthDigitNumber = Number(prompt('Please enter five digits number.'));
+const fifthDigitNumber = Number(prompt('Please enter five digit number.'));
 
 if (
   (fifthDigitNumber >= 10000 && fifthDigitNumber <= 99999) ||
