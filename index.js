@@ -1,6 +1,6 @@
 // 1 За допомогою prompt запитати як звуть користувача. За допомогою alert вивести "Hello, John! How are you?", де John це те, що ввів користувач.
 // Врахувати, що користувач може натиснути cancel або нічого не ввести
-const userName = prompt('What\'s your name?');
+const userName = prompt("What's your name?");
 
 if (userName === null || userName === '') {
   alert('Hello, anonym!');
@@ -53,8 +53,13 @@ const equalCheckMessage = alert(
 const firstValue = prompt('Please enter first value.');
 const secondValue = prompt('Please enter second value.');
 
-if (firstValue === null || secondValue === null) {
-  alert('Please enter valid digits in both fields. Renew page and try again.');
+if (
+  firstValue === null ||
+  secondValue === null ||
+  firstValue === '' ||
+  secondValue === ''
+) {
+  alert('Please enter some value in both fields. Renew page and try again.');
 } else {
   alert(`The digits are equal: ${firstValue === secondValue}`);
 }
