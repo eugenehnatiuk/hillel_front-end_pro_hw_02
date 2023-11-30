@@ -15,11 +15,13 @@ const numberTwo = prompt('Enter second digit.');
 
 if (
   !isNaN(numberOne) &&
+  numberOne &&
   !isNaN(numberTwo) &&
-  numberOne !== null &&
-  numberTwo !== null &&
-  numberOne !== '' &&
-  numberTwo !== ''
+  numberTwo
+  // numberOne !== null &&
+  // numberTwo !== null &&
+  // numberOne !== '' &&
+  // numberTwo !== ''
 ) {
   const mathOperation = prompt('Enter math operation you want to execute.');
 
@@ -54,10 +56,12 @@ const firstValue = prompt('Please enter first value.');
 const secondValue = prompt('Please enter second value.');
 
 if (
-  firstValue === null ||
-  secondValue === null ||
-  firstValue === '' ||
-  secondValue === ''
+  firstValue ||
+  secondValue
+  // firstValue === null ||
+  // secondValue === null ||
+  // firstValue === '' ||
+  // secondValue === ''
 ) {
   alert('Please enter some value in both fields. Renew page and try again.');
 } else {
@@ -68,8 +72,11 @@ if (
 const fifthDigitNumber = Number(prompt('Please enter five digit number.'));
 
 if (
-  (fifthDigitNumber >= 10000 && fifthDigitNumber <= 99999) ||
-  (fifthDigitNumber <= -10000 && fifthDigitNumber >= -99999)
+  Number.isInteger(fifthDigitNumber) &&
+  Math.abs(fifthDigitNumber).toString().length === 5
+
+  // (fifthDigitNumber >= 10000 && fifthDigitNumber <= 99999) ||
+  // (fifthDigitNumber <= -10000 && fifthDigitNumber >= -99999)
 ) {
   const number = Math.abs(fifthDigitNumber);
   const fifthDigit = number % 10;
